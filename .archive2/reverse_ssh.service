@@ -1,0 +1,10 @@
+[Unit]
+Description=autossh
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/autossh -i /home/xzhang1/.ssh/id_rsa -fNR */:8070:localhost:22 ec2-user@52.205.255.228
+
+[Install]
+WantedBy=multi-user.target
